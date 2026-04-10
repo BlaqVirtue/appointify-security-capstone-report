@@ -1,0 +1,20 @@
+Appointify Web Platform
+Phase 7 - Cybersecurity Review
+Vephla University · Department of Cybersecurity
+Capstone Project · Team 3 · Academic Year 2025/2026
+
+Executive Summary
+The Appointify platform demonstrates a strong security baseline. No critical vulnerabilities were successfully exploited during testing. Key strengths include RBAC enforcement, injection resistance, TLS 1.3 encryption, and strong booking logic controls. Primary weaknesses identified include brute-force exposure, lack of MFA, weak phone validation, missing security headers, and persistent sessions.
+Objective
+This report provides a technical analysis of authentication, authorization, input validation, business logic, and infrastructure security controls.
+Methodology
+Testing used manual adversarial interaction, Burp Suite interception, Nmap reconnaissance, Wireshark TLS inspection, browser developer tools, and multi-session booking simulations.
+Key Findings
+• High: No brute-force rate limiting
+• High: No MFA
+• Medium: Session timeout persistence
+• Medium: Missing HTTP security headers
+• Medium: Weak phone number validation
+• Low: NoSQL malformed payload caused 500 error
+Technical Conclusion
+Security maturity is Moderate–Strong with targeted hardening required. No critical exploit was achieved. Main improvements should focus on authentication hardening and browser-level defensive headers.
